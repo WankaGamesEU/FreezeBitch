@@ -13,19 +13,13 @@ public class firePistol : MonoBehaviour {
 	void Update () {
 				RaycastHit hit;
 				Ray playerSight = new Ray (transform.position, transform.forward); 
-				if (Physics.Raycast (playerSight, out hit, 2))
-				if (gathering == false) {
-						if (Input.GetButton ("Use")) {
-								if (hit.collider.tag == "Trees") {
-										gathering = true;
-										gatheringtime = Random.Range (10, 30);
-					for(int i = gatheringtime; i => 0; i-- ) {
-						yield return new WaitForSeconds (1);
-
-					}
-										if (gatheringtime == 0) {
-
-												Destroy (hit.transform.gameObject);
+				if (Physics.Raycast (playerSight, out hit, 2)) {
+						if (gathering == false) {
+								if (Input.GetButton ("Use")) {
+										if (hit.collider.tag == "Trees") {
+												gathering = true;
+												gatherTree() ;
+												if (
 										}
 								}
 						}
@@ -36,9 +30,22 @@ public class firePistol : MonoBehaviour {
 				}
 		}
 
-	void OnGUI() {
-		GUI.Box(new Rect(0, 0, Screen.width, Screen.height), gatheringtime.ToString());
 
-	}
+	void gatherTree() {
+		gatheringtime = Random.Range (10, 30);
+		for (int time = gatheringtime; time >= 0; --time);
+
+
+
+		}
+
+						void OnGUI() {
+							GUI.Box(new Rect(0, 0, Screen.width, Screen.height), gatheringtime.ToString());
+							
+						}
+	
 }
 
+
+//gatheringtime = Random.Range (10, 30);
+//for (int time = gatheringtime; time >= 0; --time) 
