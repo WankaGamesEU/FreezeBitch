@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	
-	public int health = 100;
+	public double health = 100;
 	public float playerMovementSpeed = 5.0f;
 	public float mouseSens = 5.0f;
 	public float rangeUpDown = 60f;
@@ -22,12 +22,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-				if (Input.GetKeyDown (KeyCode.E)) {
-						TakeDamage ();
-				}
-				if (health <= 90){
-						maxnumberOfJumps = 5;
-		}
+
 		// CameraRot
 
 			//Horizontal
