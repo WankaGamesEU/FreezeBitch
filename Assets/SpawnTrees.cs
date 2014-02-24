@@ -16,7 +16,7 @@ public class SpawnTrees : MonoBehaviour {
 	}
 
 	void spawnTrees () {
-		Vector3 position = new Vector3(Random.Range(25.0F, -25.0F), 0, Random.Range(25.0F, -25.0F));
+		Vector3 position = new Vector3(Random.Range(25.0F, -25.0F), 1, Random.Range(25.0F, -25.0F));
 		Instantiate (tree, position, Quaternion.identity);
 		spawnsLeft -= 1;
 		if (spawnsLeft >= 1) {
