@@ -19,14 +19,11 @@ public class firePistol : MonoBehaviour {
 										if (hit.collider.tag == "Trees") {
 												gathering = true;
 												gatherTree() ;
-												if (
 										}
+								}else{
+									gathering = false;	
 								}
 						}
-				}
-
-		if (Input.GetButtonUp ("Use")) {
-			gathering = false;
 				}
 		}
 
