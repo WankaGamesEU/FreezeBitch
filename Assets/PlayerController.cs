@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	
-	public double health = 100;
+	public int health = 100;
 	public float playerMovementSpeed = 5.0f;
 	public float mouseSens = 5.0f;
 	public float rangeUpDown = 60f;
@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-
 		// CameraRot
 
 			//Horizontal
@@ -75,7 +74,11 @@ public class PlayerController : MonoBehaviour {
 	void TakeDamage () {
 		health -= 10;
 	}
-	
+
+	void OnGUI() {
+		GUI.Box(new Rect(10, 10, 75, 25), "Health " + health.ToString());
+		
+	}
 
 }
 
