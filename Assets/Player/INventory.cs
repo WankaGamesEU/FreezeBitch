@@ -3,7 +3,7 @@ using System.Collections;
 
 public class INventory : MonoBehaviour {
 
-	int Logs;
+	private int Logs;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,7 +14,12 @@ public class INventory : MonoBehaviour {
 	
 	}
 
-	public int getInventory {
+	public int getInventory (){
+		return Logs;
+	}
+
+	public int setlogs(int x) {
+		Logs += x;
 		return Logs;
 	}
 	
