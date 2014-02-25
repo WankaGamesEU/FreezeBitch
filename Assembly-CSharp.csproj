@@ -46,7 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Player\INventory.cs" />
      <Compile Include="Assets\PlayerController.cs" />
+     <Compile Include="Assets\Resources\Trees\treeLife.cs" />
      <Compile Include="Assets\SpawnTrees.cs" />
      <Compile Include="Assets\firePistol.cs" />
   </ItemGroup>

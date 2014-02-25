@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	
+
 	public int health = 100;
 	public float playerMovementSpeed = 5.0f;
 	public float mouseSens = 5.0f;
@@ -78,6 +78,10 @@ public class PlayerController : MonoBehaviour {
 	void OnGUI() {
 		GUI.Box(new Rect(10, 10, 75, 25), "Health " + health.ToString());
 		
+	}
+
+	public int getHealth(){
+		return health;
 	}
 
 }

@@ -7,12 +7,14 @@ public class SpawnTrees : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spawnTrees ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (spawnsLeft >= 1) {
+						spawnTrees ();
+
+				}
 	}
 
 	void spawnTrees () {
